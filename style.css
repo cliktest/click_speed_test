@@ -181,4 +181,200 @@ box-shadow:
 
 0 40px 120px rgba(0,0,0,0.9),
 0 10px 40px rgba(0,0,0,0.6),
-inset 0 1px 0 rgba(
+inset 0 1px 0 rgba(255,255,255,0.04);
+
+overflow:hidden;
+
+}
+
+
+
+/* =========================
+SUBTLE CORNER GLOW
+========================= */
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:-2px;
+left:-2px;
+
+width:180px;
+height:180px;
+
+border-top-left-radius:20px;
+
+background: linear-gradient(
+135deg,
+rgba(59,130,246,0.95),
+rgba(59,130,246,0.4),
+transparent 65%
+);
+
+filter: blur(16px);
+
+opacity:0.75;
+
+animation:cornerGlow 4s ease-in-out infinite;
+
+pointer-events:none;
+
+}
+
+
+
+/* SOFT BREATHING ANIMATION */
+
+@keyframes cornerGlow{
+
+0%{
+
+opacity:0.5;
+filter: blur(14px);
+
+}
+
+50%{
+
+opacity:0.9;
+filter: blur(20px);
+
+}
+
+100%{
+
+opacity:0.5;
+filter: blur(14px);
+
+}
+
+}
+
+
+
+/* =========================
+COUNTER TEXT
+========================= */
+
+.counter-display h2{
+
+font-size:72px;
+
+font-weight:700;
+
+}
+
+.counter-display p{
+
+opacity:0.6;
+
+margin-top:5px;
+
+}
+
+
+
+/* CPS */
+
+.cps-display{
+
+margin-top:20px;
+
+}
+
+.cps-display span{
+
+font-size:30px;
+
+font-weight:600;
+
+}
+
+.cps-display p{
+
+opacity:0.6;
+
+margin-top:5px;
+
+}
+
+
+
+/* =========================
+BUTTON
+========================= */
+
+.click-btn{
+
+margin-top:35px;
+
+width:100%;
+
+padding:18px;
+
+font-size:18px;
+
+font-weight:600;
+
+border:none;
+
+border-radius:12px;
+
+cursor:pointer;
+
+color:white;
+
+background: linear-gradient(
+135deg,
+#2563eb,
+#3b82f6
+);
+
+box-shadow:
+
+0 0 25px rgba(59,130,246,0.5);
+
+transition:0.25s ease;
+
+}
+
+.click-btn:hover{
+
+transform:scale(1.04);
+
+box-shadow:
+
+0 0 40px rgba(59,130,246,0.8);
+
+}
+
+
+
+/* RESET BUTTON */
+
+.secondary-btn{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+border-radius:10px;
+background:#1e293b;
+color:white;
+cursor:pointer;
+transition:0.2s;
+}
+.secondary-btn:hover{
+background:#334155;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+.footer{
+margin-top:30px;
+opacity:0.4;
+font-size:14px;
+}
