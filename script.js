@@ -9,38 +9,45 @@ const cpsDisplay = document.getElementById("cps");
 
 clickButton.addEventListener("click", () => {
 
-    if (startTime === null) {
-        startTime = new Date().getTime();
-    }
+if(startTime === null){
 
-    clicks++;
-
-    clickCountDisplay.innerText = clicks;
-
-    updateCPS();
-
-});
-
-resetBtn.addEventListener("click", reset);
-
-function updateCPS() {
-
-    const currentTime = new Date().getTime();
-
-    const elapsed = (currentTime - startTime) / 1000;
-
-    const cps = clicks / elapsed;
-
-    cpsDisplay.innerText = cps.toFixed(2);
+startTime = new Date().getTime();
 
 }
 
-function reset() {
+clicks++;
 
-    clicks = 0;
-    startTime = null;
+clickCountDisplay.innerText = clicks;
 
-    clickCountDisplay.innerText = "0";
-    cpsDisplay.innerText = "0.00";
+updateCPS();
+
+});
+
+
+resetBtn.addEventListener("click", reset);
+
+
+function updateCPS(){
+
+const currentTime = new Date().getTime();
+
+const elapsed = (currentTime - startTime) / 1000;
+
+const cps = clicks / elapsed;
+
+cpsDisplay.innerText = cps.toFixed(2);
+
+}
+
+
+function reset(){
+
+clicks = 0;
+
+startTime = null;
+
+clickCountDisplay.innerText = "0";
+
+cpsDisplay.innerText = "0.00";
 
 }
