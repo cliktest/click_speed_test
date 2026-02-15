@@ -1,60 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ClickCheck — Premium Tool</title>
+<title>ClickCheck — Premium Click Tools</title>
 
 <link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<meta name="google-site-verification" content="2z-puJTvpxOPl3PvIdCCzxW_a7hMUO3iBsum4brxqS0" />
+
 </head>
 <body>
 
 
 <!-- NAVBAR -->
+
 <nav class="navbar">
 
-    <div class="nav-logo">
-        ClickCheck
-    </div>
+<div class="nav-logo">
+ClickCheck
+</div>
 
-    <ul class="nav-menu">
+<ul class="nav-menu">
 
-        <li><a href="#">All Tools</a></li>
-        <li><a href="#" class="active">Click Check</a></li>
-        <li><a href="#">Speed Test</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
+<li><a href="#" class="active">All Tools</a></li>
+<li><a href="#click-check">Click Check</a></li>
+<li><a href="#speed-test">Speed Test</a></li>
+<li><a href="#about">About Us</a></li>
+<li><a href="#contact">Contact Us</a></li>
 
-    </ul>
+</ul>
 
 </nav>
 
 
 
-<!-- MAIN -->
+<!-- MAIN CONTAINER -->
+
 <div class="container">
 
+
 <header class="header">
-<h1>ClickCheck</h1>
-<p>Premium Click Speed Testing Tool</p>
+
+<h1>ClickCheck Tools</h1>
+
+<p>Premium Mouse Testing Tools</p>
+
 </header>
 
 
 
-<!-- ANIMATED BORDER BOX -->
-<div class="box-wrapper">
+<!-- CLICK CHECK TOOL -->
 
-<div class="animated-border"></div>
+<section id="click-check">
+
+<header class="header">
+
+<h2>Click Check Tool</h2>
+
+<p>Count your mouse clicks accurately</p>
+
+</header>
+
+
+<div class="box-wrapper">
 
 <div class="card">
 
 <div class="counter-display">
 
 <h2 id="clickCount">0</h2>
+
+<p>Total Clicks</p>
+
+</div>
+
+
+<button id="clickButton" class="click-btn">
+
+Click Here
+
+</button>
+
+
+<button id="resetBtn" class="secondary-btn">
+
+Reset
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- SPEED TEST TOOL -->
+
+<section id="speed-test">
+
+<header class="header">
+
+<h2>Speed Test Tool</h2>
+
+<p>Measure your clicking speed (CPS)</p>
+
+</header>
+
+
+<div class="box-wrapper">
+
+<div class="card">
+
+<div class="counter-display">
+
+<h2 id="speedClickCount">0</h2>
+
 <p>Clicks</p>
 
 </div>
@@ -63,85 +128,97 @@
 <div class="cps-display">
 
 <span id="cps">0.00</span>
+
 <p>Clicks Per Second</p>
 
 </div>
 
 
-<button id="clickButton" class="click-btn">
+<button id="speedClickButton" class="click-btn">
+
 Click Here
+
 </button>
 
 
-<button id="resetBtn" class="secondary-btn">
+<button id="speedResetBtn" class="secondary-btn">
+
 Reset
+
 </button>
 
-
 </div>
 
 </div>
 
+</section>
 
 
-<!-- ABOUT TOOL SECTION -->
-<section class="info-section">
 
-    <div class="info-container">
+<!-- ABOUT SECTION -->
 
-        <h2>About ClickCheck Tool</h2>
+<section id="about" class="info-section">
 
-        <p>
-            ClickCheck is a premium online click counter and click speed testing tool designed to measure how fast you can click your mouse. This tool accurately tracks your total clicks and calculates your clicks per second (CPS) in real time. It is useful for gamers, developers, performance testers, and anyone who wants to analyze their mouse clicking speed.
-        </p>
+<div class="info-container">
 
-        <p>
-            Whether you are testing your gaming performance, improving your reaction speed, or verifying mouse functionality, ClickCheck provides instant results with a clean, modern interface. The tool runs entirely in your browser, requires no installation, and works on all modern devices including desktop, laptop, and mobile.
-        </p>
+<h2>About ClickCheck Tools</h2>
 
-    </div>
+<p>
+ClickCheck provides premium browser-based mouse testing tools designed for gamers, developers, and everyday users. The Click Check tool counts total clicks to verify mouse performance and durability, while the Speed Test tool measures clicks per second to evaluate clicking speed and reaction time.
+</p>
+
+<p>
+These tools run directly in your browser, require no installation, and work across all devices. Whether you are testing gaming performance or verifying hardware functionality, ClickCheck delivers accurate, instant results in a clean, professional interface.
+</p>
+
+</div>
 
 </section>
 
 
 
 <!-- CONTACT SECTION -->
-<section class="contact-section">
 
-    <div class="contact-container">
+<section id="contact" class="contact-section">
 
-        <h2>Contact Us</h2>
+<div class="contact-container">
 
-        <p class="contact-subtitle">
-            Have feedback, suggestions, or want to request a new tool? Send us a message.
-        </p>
+<h2>Contact Us</h2>
 
-        <form class="contact-form">
+<p class="contact-subtitle">
+Send feedback or request new tools
+</p>
 
-            <input type="text" placeholder="Your Name" required>
 
-            <input type="email" placeholder="Your Email" required>
+<form class="contact-form">
 
-            <textarea placeholder="Your Message" rows="5" required></textarea>
+<input type="text" placeholder="Your Name" required>
 
-            <button type="submit" class="click-btn">
-                Send Message
-            </button>
+<input type="email" placeholder="Your Email" required>
 
-        </form>
+<textarea placeholder="Your Message" rows="5" required></textarea>
 
-    </div>
+<button type="submit" class="click-btn">
+Send Message
+</button>
+
+</form>
+
+</div>
 
 </section>
 
 
 
+<!-- FOOTER -->
+
 <footer class="footer">
-© 2026 ClickCheck Tool
+
+© 2026 ClickCheck Tool — All Rights Reserved
+
 </footer>
-
-
 </div>
+
 
 
 <script src="script.js"></script>
