@@ -1,13 +1,46 @@
-let clicks = 0;
-let startTime = null;
+/* =========================
+CLICK CHECK TOOL
+========================= */
+
+let clickCount = 0;
 
 const clickButton = document.getElementById("clickButton");
 const resetBtn = document.getElementById("resetBtn");
-
-const clickCountDisplay = document.getElementById("clickCount");
-const cpsDisplay = document.getElementById("cps");
+const clickDisplay = document.getElementById("clickCount");
 
 clickButton.addEventListener("click", () => {
+
+clickCount++;
+
+clickDisplay.innerText = clickCount;
+
+});
+
+resetBtn.addEventListener("click", () => {
+
+clickCount = 0;
+
+clickDisplay.innerText = "0";
+
+});
+
+
+
+/* =========================
+SPEED TEST TOOL
+========================= */
+
+let speedClicks = 0;
+let startTime = null;
+
+const speedClickButton = document.getElementById("speedClickButton");
+const speedResetBtn = document.getElementById("speedResetBtn");
+
+const speedClickDisplay = document.getElementById("speedClickCount");
+const cpsDisplay = document.getElementById("cps");
+
+
+speedClickButton.addEventListener("click", () => {
 
 if(startTime === null){
 
@@ -15,16 +48,16 @@ startTime = new Date().getTime();
 
 }
 
-clicks++;
+speedClicks++;
 
-clickCountDisplay.innerText = clicks;
+speedClickDisplay.innerText = speedClicks;
 
 updateCPS();
 
 });
 
 
-resetBtn.addEventListener("click", reset);
+speedResetBtn.addEventListener("click", resetSpeedTest);
 
 
 function updateCPS(){
@@ -33,21 +66,20 @@ const currentTime = new Date().getTime();
 
 const elapsed = (currentTime - startTime) / 1000;
 
-const cps = clicks / elapsed;
+const cps = speedClicks / elapsed;
 
 cpsDisplay.innerText = cps.toFixed(2);
 
 }
 
 
-function reset(){
+function resetSpeedTest(){
 
-clicks = 0;
-
+speedClicks = 0;
 startTime = null;
 
-clickCountDisplay.innerText = "0";
-
+speedClickDisplay.innerText = "0";
 cpsDisplay.innerText = "0.00";
 
 }
+
