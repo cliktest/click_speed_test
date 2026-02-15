@@ -1,60 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClickCheck — Premium Click Counter Tool</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+<title>ClickCheck — Premium Tool</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
-    <div class="container">
 
-        <!-- Header -->
-        <header class="header">
-            <h1 class="logo">ClickCheck</h1>
-            <p class="subtitle">Premium Click Speed Testing Tool</p>
-        </header>
+<!-- NAVBAR -->
+<nav class="navbar">
 
-
-        <!-- Main Card -->
-        <div class="card">
-
-            <div class="counter-display">
-                <h2 id="clickCount">0</h2>
-                <p>Clicks</p>
-            </div>
-
-            <div class="cps-display">
-                <span id="cps">0.00</span>
-                <p>Clicks Per Second</p>
-            </div>
-
-            <!-- Click Area -->
-            <button id="clickButton" class="click-btn">
-                Click Here
-            </button>
-
-            <!-- Controls -->
-            <div class="controls">
-                <button id="resetBtn" class="secondary-btn">
-                    Reset
-                </button>
-            </div>
-
-        </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <p>© 2026 ClickCheck Tool</p>
-        </footer>
-
+    <div class="nav-logo">
+        ClickCheck
     </div>
+
+    <ul class="nav-menu">
+
+        <li><a href="#">All Tools</a></li>
+        <li><a href="#" class="active">Click Check</a></li>
+        <li><a href="#">Speed Test</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- MAIN -->
+<div class="container">
+
+<header class="header">
+<h1>ClickCheck</h1>
+<p>Premium Click Speed Testing Tool</p>
+</header>
+
+
+
+<!-- ANIMATED BORDER BOX -->
+<div class="box-wrapper">
+
+<div class="animated-border"></div>
+
+<div class="card">
+
+<div class="counter-display">
+
+<h2 id="clickCount">0</h2>
+<p>Clicks</p>
+
+</div>
+
+
+<div class="cps-display">
+
+<span id="cps">0.00</span>
+<p>Clicks Per Second</p>
+
+</div>
+
+
+<button id="clickButton" class="click-btn">
+Click Here
+</button>
+
+
+<button id="resetBtn" class="secondary-btn">
+Reset
+</button>
+
+
+</div>
+
+</div>
+
+
+<footer class="footer">
+© 2026 ClickCheck Tool
+</footer>
+
+
+</div>
+
 
 <script src="script.js"></script>
 
